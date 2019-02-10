@@ -1,0 +1,19 @@
+<article>
+  <h2>
+    <%= @article.title %>
+
+    <small>
+       <!-- edit form -->
+      <%= link_to edit_article_path(@article) do %> <i class="fa fa-pencil"></i><% end %>
+      <!-- delete action -> http path -->
+      <%= link_to article_path(@article),
+          method: :delete,
+          data: { confirm: "Are you sure?" } do %>
+          <i class="fa fa-trash-o" aria-hidden="true"></i>
+         <% end %>
+    </small>
+  </h2>
+  <p> <%= @article.content %> </p>
+</article>
+
+<!-- redirect to main -->

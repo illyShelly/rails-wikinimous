@@ -1,0 +1,9 @@
+<% @articles.each do |article| %>
+  <article>
+    <h2><%= link_to article.title, article %></h2>
+    <!-- display just part of content -> few sentences -->
+    <%= article.content[0..90] %>
+  </article>
+<% end %>
+
+<!-- 1. naming!! -> index... -->
